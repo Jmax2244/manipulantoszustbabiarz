@@ -45,7 +45,7 @@ class Program
 }
 */
 
-
+/*
 using System;
 
 class Program
@@ -69,5 +69,39 @@ class Program
         {
             Console.WriteLine("Ale mordo nie wpisales nic");
         }
+    }
+}
+*/
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Podaj jakis tekscik dobry mordo");
+        string tekst = Console.ReadLine();
+
+        Console.WriteLine("Podaj znak do policzonka (1 literka):");
+        string znakString = Console.ReadLine();
+
+        if (string.IsNullOrEmpty(znakString) || znakString.Length != 1)
+        {
+            Console.WriteLine("Miales podac tylko jeden znak koleszko");
+            return;
+        }
+
+        char znak = znakString[0];
+        int licznik = 0;
+
+        for (int i = 0; i < tekst.Length; i++)
+        {
+            if (tekst[i] == znak)
+            {
+                licznik++;
+            }
+        }
+
+        Console.WriteLine($"Znak '{znak}' wystepuje tutaj {licznik} razy.");
     }
 }

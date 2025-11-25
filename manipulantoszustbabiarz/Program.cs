@@ -1,4 +1,5 @@
-﻿using System;
+﻿/* 
+using System;
 
 class Program
 {
@@ -39,6 +40,34 @@ class Program
         else
         {
             Console.WriteLine("Zly wybur koleszko. Wpisz 'wielki', 'maly' albo 'pierwszak'.");
+        }
+    }
+}
+*/
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Podaj jakis tekscik byniu");
+        string tekst = Console.ReadLine();
+
+        string czystyjakperuwianskikoks = tekst.Trim();
+
+        Console.WriteLine($"Wpisane: {czystyjakperuwianskikoks}");
+        Console.WriteLine($"Długonosc: {czystyjakperuwianskikoks.Length}");
+
+        if (czystyjakperuwianskikoks.Length > 0)
+        {
+            Console.WriteLine($"Pierwsza litera: {czystyjakperuwianskikoks[0]}");
+            Console.WriteLine($"Ostatnia litera: {czystyjakperuwianskikoks[czystyjakperuwianskikoks.Length - 1]}");
+        }
+        else
+        {
+            Console.WriteLine("Ale mordo nie wpisales nic");
         }
     }
 }

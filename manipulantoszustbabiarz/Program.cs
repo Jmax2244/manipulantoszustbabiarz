@@ -114,12 +114,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Podaj zdanko do wyremontowania");
+        Console.WriteLine("Podaj zdanko do przeremotowania");
         string tekst = Console.ReadLine();
 
-        string wynik = tekst.Replace(" ", "_");
+        Console.WriteLine("Na jaki znak chcesz tutaj wymienic spacje?");
+        string znakString = Console.ReadLine();
 
-        Console.WriteLine("Po zamianie spacji na _: ");
+        char znak = znakString[0];
+
+        string wynik = tekst.Replace(' ', znak);
+
+        Console.WriteLine("Po zamianie spacji:");
         Console.WriteLine(wynik);
     }
 }

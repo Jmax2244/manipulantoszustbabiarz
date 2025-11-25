@@ -118,13 +118,17 @@ class Program
         string tekst = Console.ReadLine();
 
         Console.WriteLine("Na jaki znak chcesz tutaj wymienic spacje?");
-        string znakString = Console.ReadLine();
+        string znakStaryStr = Console.ReadLine();
 
-        char znak = znakString[0];
+        Console.WriteLine("Na jaki znak chcesz go zamienic?");
+        string znakNowyStr = Console.ReadLine();
 
-        string wynik = tekst.Replace(' ', znak);
+        char znakStary = znakStaryStr[0];
+        char znakNowy = znakNowyStr[0];
 
-        Console.WriteLine("Po zamianie spacji:");
+        string wynik = tekst.Replace(znakStary, znakNowy);
+
+        Console.WriteLine("Po zamiance:");
         Console.WriteLine(wynik);
     }
 }

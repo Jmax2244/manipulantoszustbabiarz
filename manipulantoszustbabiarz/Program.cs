@@ -73,6 +73,7 @@ class Program
 }
 */
 
+/*
 using System;
 
 class Program
@@ -103,5 +104,22 @@ class Program
         }
 
         Console.WriteLine($"Znak '{znak}' wystepuje tutaj {licznik} razy.");
+    }
+}
+*/
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Podaj zdanko do wyremontowania");
+        string tekst = Console.ReadLine();
+
+        string wynik = tekst.Replace(" ", "_");
+
+        Console.WriteLine("Po zamianie spacji na _: ");
+        Console.WriteLine(wynik);
     }
 }
